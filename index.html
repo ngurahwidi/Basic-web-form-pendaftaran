@@ -207,14 +207,17 @@
             <div class="mb-3">
               <label for="nama" class="form-label">Nama</label>
               <input type="text" class="form-control" id="nama" />
+              <span id="erruser"></span>
             </div>
             <div class="mb-3">
               <label for="tempatLahir" class="form-label">Tempat Lahir</label>
               <input type="text" class="form-control" id="tempatLahir" />
+              <span id="errTempatL"></span>
             </div>
             <div class="mb-3">
               <label for="tanggalLahir" class="form-label">Tanggal Lahir</label>
               <input type="date" class="form-control" id="tanggalLahir" />
+              <span id="errTanggalL"></span>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
@@ -224,6 +227,7 @@
                 id="email"
                 placeholder="name@example.com"
               />
+              <span id="errEmail"></span>
             </div>
             <div class="form-check">
               <input
@@ -252,6 +256,7 @@
             <div class="mb-3">
               <label for="alamat" class="form-label">Alamat</label>
               <textarea class="form-control" id="alamat" rows="3"></textarea>
+              <span id="errAlamat"></span>
             </div>
             <select
               class="form-select"
@@ -263,6 +268,9 @@
               <option value="2">Sistem Informasi</option>
               <option value="3">Managemen Informatika</option>
             </select>
+            
+              <span id="errJurusan"></span>
+
             <div class="d-flex justify-content-end mt-3">
               <a
                 href="#pendaftaran"

@@ -72,3 +72,116 @@ function fadeout(myalert) {
   }, 200);
 }
 // this is form validation section
+
+const namaInput = document.getElementById("nama");
+const tempatlahirInput= document.getElementById("tempatLahir")
+const tanggalLahirInput= document.getElementById("tanggalLahir")
+const emailInput = document.getElementById("email")
+const alamatInput = document.getElementById("alamat")
+const jurusanInput = document.getElementById("jurusan")
+
+
+//Nama
+ namaInput.addEventListener('input', function() {
+    var namaValue = namaInput.value.trim();
+
+    var errorElement = document.getElementById('erruser');
+
+    if (namaValue === '') {
+        errorElement.textContent = 'Nama harus di isi ';
+        errorElement.style.color = 'red';
+        namaInput.style.border = "3px solid red";
+    } else {
+        errorElement.textContent = '';
+        namaInput.style.border = '3px solid green';
+    }
+});
+
+//tempat Lahir 
+tempatlahirInput.addEventListener('input', function(){
+  const tempatlahirValue = tempatlahirInput.value.trim();
+
+  var errorElement = document.getElementById("errTempatL");
+
+  if(tempatlahirValue === ''){
+    errorElement.textContent= 'TempatLahir harus di isi';
+    errorElement.style.color= 'red';
+    tempatlahirInput.style.border = '3px solid red ';
+  }else{
+    errorElement.textContent='';
+    tempatlahirInput.style.border='3px solid green';
+  }
+});
+
+//tanggal Lahir
+tanggalLahirInput.addEventListener('input', function(){
+  const tanggalLahirValue = tanggalLahirInput.value.trim()
+
+  var errorElement = document.getElementById("errTanggalL")
+
+  if(tanggalLahirValue === '')
+  {
+    errorElement.textContent = 'Tanggal Lahir harus di isi '
+    errorElement.style.color = 'red'
+    tanggalLahirInput.style.border = '3px solid red '
+
+  }else {
+    errorElement.textContent=''
+    tanggalLahirInput.style.border = '3px solid green'
+
+  }
+})
+
+//Email
+emailInput.addEventListener('input', function(){
+
+  const emailValue = emailInput.value.trim()
+
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+ var errorElement = document.getElementById("errEmail")
+
+  if(emailValue === '')
+  {
+    errorElement.textContent = 'email harus di isi '
+    errorElement.style.color = 'red'
+    emailInput.style.border = '3px solid red '
+  }else if(!emailPattern.test(emailValue)){
+    errorElement.textContent = 'Masukkan email dengan benar'
+    errorElement.style.color = 'red'
+    emailInput.style.border = '3px solid red '
+  }
+  else{
+    errorElement.textContent=''
+    emailInput.style.border = '3px solid green'
+  }
+})
+
+alamatInput.addEventListener("input", function(){
+  const alamatValue = alamatInput.value.trim()
+  const errorElement = document.getElementById("errAlamat")
+
+  if(alamatValue===''){
+    errorElement.textContent = 'alamat harus di isi'
+    errorElement.style.color = 'red'
+    alamatInput.style.border = '3px solid red '
+  } else{
+    errorElement.textContent = ''
+    alamatInput.style.border = '3px solid green '
+  }
+})
+
+jurusanInput.addEventListener("input", function(){
+  const jurusanValue = jurusanInput.value.trim()
+  const errorElement = document.getElementById("errJurusan")
+
+  if(jurusanValue === ''){
+    errorElement.textContent = 'ambil lah salah satu jurusan'
+    errorElement.style.color = 'red'
+    jurusanInput.style.border = '3px solid red '
+  }else{
+    errorElement.textContent = ''
+    jurusanInput.style.border = '3px solid green '
+  }
+})
+
